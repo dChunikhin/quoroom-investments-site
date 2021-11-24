@@ -47,25 +47,6 @@ export default makeStyles((theme) => {
                 right: "auto",
                 bottom: "0"
             }
-        },
-        arrowsSlider: {
-            display: "flex",
-            justifyContent: "center",
-            "& > *": {
-                display: "block",
-                width: "50px",
-                height: "16px",
-                backgroundColor: "rgba(247, 172, 114, 0)",
-                backgroundImage: "url(" + ArrowSlider + ")",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "right center",
-                backgroundSize: "50px 15px",
-                border: "none",
-                margin: "0 40px"
-            }
-        },
-        arrowLeft: {
-            transform: "scaleX(-1)"
         }
     }
 });

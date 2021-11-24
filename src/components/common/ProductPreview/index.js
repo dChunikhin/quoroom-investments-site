@@ -34,11 +34,13 @@ const ProductPreview = ({data}) => {
                         <Grid item xs={6} sm={6} md={6} lg={6}>
                             <TitledText title={"Площадь"} inline={isLg ? false : true} extraClasses={{ root: classes.infoText}}>
                                 {data?.area}
+                                97.4м
                             </TitledText>
                         </Grid>
                         <Grid item xs={6} sm={6} md={6} lg={6}>
                             <TitledText title={"Габариты"} inline={isLg ? false : true} extraClasses={{ root: classes.infoText }}>
                                 {data?.dimensions}
+                                97.4м
                             </TitledText>
                         </Grid>
                         <Grid item xs={6} sm={6} md={6} lg={6}>
