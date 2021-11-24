@@ -1,19 +1,16 @@
-import React from "react"
 import {makeStyles} from "@mui/styles"
 
 export default makeStyles((theme) => {
-
     return {
-        root: {
+        root: {},
+        link: theme.mixins.link,
+        title: {
+            marginBottom: "34px",
             [theme.breakpoints.down('md')]: {
-                display: "none"
+                fontSize:"24px"
             },
         },
-        iconWrapper: {
-            maxWidth: "190px",
-            marginBottom: "40px"
-        },
-        icon: {
+        image: {
             width: "100%"
         }
     }

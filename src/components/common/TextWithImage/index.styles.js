@@ -6,16 +6,18 @@ import {makeStyles} from "@mui/styles"
 export default makeStyles((theme) => {
 
     return {
-        root: {
+        root: {},
+        wrapper: {
             display: "flex",
             justifyContent: "flex-start",
-            alignItems: "flex-start",
+            alignItems: "center",
             alignContent: "flex-start",
             [theme.breakpoints.down('md')]: {
                 marginBottom: "24px"
             },
         },
-        icon: {
+        imageWrapper: {},
+        image: {
             marginRight: "14px"
         },
         text: {

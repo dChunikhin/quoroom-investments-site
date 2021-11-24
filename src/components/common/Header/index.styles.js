@@ -1,5 +1,7 @@
 import React from "react";
 
+import gradientLink from "assets/gradient_link.png"
+
 
 
 import {makeStyles} from "@mui/styles";
@@ -8,13 +10,13 @@ import {makeStyles} from "@mui/styles";
 export default makeStyles((theme) => {
     return {
         root: {
-            padding: "28px 0",
-            position: "absolute",
+            padding: "0",
+            position: "fixed",
             top: "0",
             left: "auto",
             width: "100%",
             zIndex: "1",
-            backgroundColor: "rgba(37, 37, 45, 0.4)",
+            backgroundColor: "rgba(37, 37, 45, .94)",
         },
         container: {
             position: "relative",
@@ -24,7 +26,7 @@ export default makeStyles((theme) => {
                 flexBasis: "33.333%",
             },
             [theme.breakpoints.down('md')]: {
-                padding: "24px 24px"
+                padding: "34px 14px",
             },
         },
         logo: {
@@ -34,14 +36,49 @@ export default makeStyles((theme) => {
         },
         menu:{
             display: "flex",
+            [theme.breakpoints.up('md')]: {
+                display: "flex"
+            },
+            [theme.breakpoints.down('md')]: {
+                display: "none"
+            },
+        },
+        link: {
+            transition: "all .3s ease-out",
+            display: "block",
+            padding: "42px 20px",
+            fontFamily: "Roboto",
+            fontSize: "14px",
+            color: "#fff",
+            fontWeight: "200",
+            textDecoration: "none",
+            borderBottom: "2px solid transparent",
+            "&:hover": {
+                borderBottom: "2px solid #F7AC72"
+            },
+        },
+        activeLink: {
+            borderBottom: "2px solid #F7AC72",
+            backgroundImage: `url(${gradientLink})`,
+            backgroundRepeat: "repeat-x",
+            backgroundSize: "1px 100%"
         },
         menu__button: {
             backgroundColor: "rgba(37, 37, 45, 0)",
-            border: "none"
+            border: "none",
+            [theme.breakpoints.up('md')]: {
+                display: "none"
+            },
+            [theme.breakpoints.down('md')]: {
+                display: "flex"
+            },
         },
         logo__img: {
             display: "block",
-            maxWidth: "130px"
+            maxWidth: "130px",
+            [theme.breakpoints.down('md')]: {
+                maxWidth: "80px",
+            },
         },
         phone: {
             display: "flex",

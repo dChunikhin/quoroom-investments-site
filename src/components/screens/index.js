@@ -7,6 +7,8 @@ import ContactUsScreen from "./ContactUsScreen";
 import NewsScreen from "./NewsScreen";
 import SchemeScreen from "./SchemeScreen";
 import GalleryScreen from "./GalleryScreen";
+import PlansScreen from "./PlansScreen";
+import CompleteSetScreen from "./CompleteSetScreen";
 
 export {
     MainScreen,
@@ -17,5 +19,7 @@ export {
     ContactUsScreen,
     NewsScreen,
     SchemeScreen,
-    GalleryScreen
+    GalleryScreen,
+    PlansScreen,
+    CompleteSetScreen
 }

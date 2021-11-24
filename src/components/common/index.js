@@ -1,32 +1,32 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import SlickSlider from "./SlickSlider"
-import SliderArrow from "./SliderArrow";
-import ImageWithText from "./ImageWithText";
-import BigIconWithText from "./BigIconWithText";
 import TechnologyDescription from "./TechnologyDescription";
 import ButtonWithArrow from "./buttons/ButtonWithArrow";
-import ProductCard from "./ProductCard";
+import ProductPreview from "./ProductPreview";
 import TitledText from "./TitledText";
-import TextWithIcon from "./TextWithIcon";
 import NewCard from "./NewCard";
 import PhoneButton from "./PhoneButton";
 import ScreenLayout from "./ScreenLayout";
+import TextWithImage from "./TextWithImage";
+import Slider from "./Slider";
+import BreadcrumbsLayout from "./BreadcrumbsLayout";
+import CompleteSetCard from "./CompleteSetCard";
+import ProductCard from "./ProductCard"
 
 
 export {
     Header,
-    SlickSlider,
-    SliderArrow,
     Footer,
-    ImageWithText,
-    BigIconWithText,
     TechnologyDescription,
     ButtonWithArrow,
-    ProductCard,
+    ProductPreview,
     TitledText,
-    TextWithIcon,
     NewCard,
     PhoneButton,
-    ScreenLayout
+    ScreenLayout,
+    TextWithImage,
+    Slider,
+    BreadcrumbsLayout,
+    CompleteSetCard,
+    ProductCard
 }

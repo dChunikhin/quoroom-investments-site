@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "title": "Строительство нового Таунхауса не за горами",
+    "publishDate": "14.09.2021",
+    "picture": "",
+    "description": "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque blanditiis culpa cum doloremque dolores, doloribus exercitationem harum laudantium magnam molestiae praesentium totam velit voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque blanditiis culpa cum doloremque dolores, doloribus exercitationem harum laudantium magnam molestiae praesentium totam velit voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque blanditiis culpa cum doloremque dolores, doloribus exercitationem harum laudantium magnam molestiae praesentium totam velit voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque blanditiis culpa cum doloremque dolores, doloribus exercitationem harum laudantium magnam molestiae praesentium totam velit voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque blanditiis culpa cum doloremque dolores, doloribus exercitationem harum laudantium magnam molestiae praesentium totam velit voluptatibus."
+  },
+  {
+    "id": "2",
+    "title": "Зеленский объявил о старте Большого строительства на УЗ",
+    "publishDate": "14.09.2021",
+    "picture": "",
+    "description": "Давнj, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться",
+    "content": "Lorem2 ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque blanditiis culpa cum doloremque dolores, doloribus exercitationem harum laudantium magnam molestiae praesentium totam velit voluptatibus."
+  },
+  {
+    "id": "3",
+    "title": "Мининфраструктуры будет контролировать стоимость строительства дорог",
+    "publishDate": "14.09.2021",
+    "picture": "",
+    "description": "Давнj, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться",
+    "content": "Lorem2 ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque blanditiis culpa cum doloremque dolores, doloribus exercitationem harum laudantium magnam molestiae praesentium totam velit voluptatibus."
+  },
+  {
+    "id": "4",
+    "title": "Кличко уволил своего заместителя: медленно строит мост",
+    "publishDate": "14.09.2021",
+    "picture": "",
+    "description": "Давнj, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться",
+    "content": "Lorem2 ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque blanditiis culpa cum doloremque dolores, doloribus exercitationem harum laudantium magnam molestiae praesentium totam velit voluptatibus."
+  }
+]

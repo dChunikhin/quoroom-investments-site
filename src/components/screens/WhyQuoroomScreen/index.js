@@ -3,7 +3,7 @@ import React from "react"
 import {Box, Container, Typography, Grid, Tabs, Tab} from "@mui/material"
 import IconTest from 'assets/house_icon.png'
 import PropTypes from 'prop-types'
-import {BigIconWithText, ImageWithText, ScreenLayout} from "../../common";
+import { ScreenLayout, TextWithImage} from "../../common";
 
 const WhyQuoroomScreen = () => {
     const classes = styles();
@@ -82,11 +82,24 @@ const WhyQuoroomScreen = () => {
                                 variant="fullWidth"
 
                                 label={
-                                    <ImageWithText
+                                    <TextWithImage
                                         url={IconTest}
-                                        title="Большой опыт в строительстве"
-                                        description="1_Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах"
-                                    />
+                                        title={"Большой опыт в строительстве"}
+                                        variantText={"body1"}
+                                        variantTitle={"h4"}
+                                        extraClasses={{
+                                            root:classes.wrapperTab,
+                                            title:classes.titleTab,
+                                            text:classes.textTab,
+                                            imageWrapper: classes.imageWrapperTab,
+                                            image:classes.imageTab
+                                        }}
+                                    >
+                                        1_Давно выяснено, что при оценке дизайна и композиции
+                                        читаемый текст мешает сосредоточиться. Lorem Ipsum используют
+                                        потому, что тот обеспечивает более или менее стандартное заполнение
+                                        шаблона, а также реальное распределение букв и пробелов в абзацах
+                                    </TextWithImage>
                                 }
                                 {...a11yProps(0)}
                             >
@@ -100,11 +113,24 @@ const WhyQuoroomScreen = () => {
                                     marginBottom: "40px"
                                 }}
                                 label={
-                                    <ImageWithText
+                                    <TextWithImage
                                         url={IconTest}
-                                        title="Бесплатное и быстрое оформление"
-                                        description="2_Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах"
-                                    />
+                                        title={"Бесплатное и быстрое оформление"}
+                                        variantText={"body1"}
+                                        variantTitle={"h4"}
+                                        extraClasses={{
+                                            root:classes.wrapperTab,
+                                            title:classes.titleTab,
+                                            text:classes.textTab,
+                                            imageWrapper: classes.imageWrapperTab,
+                                            image:classes.imageTab
+                                        }}
+                                    >
+                                        2_Давно выяснено, что при оценке дизайна и композиции
+                                        читаемый текст мешает сосредоточиться. Lorem Ipsum используют
+                                        потому, что тот обеспечивает более или менее стандартное заполнение
+                                        шаблона, а также реальное распределение букв и пробелов в абзацах
+                                    </TextWithImage>
                                 }
                                 {...a11yProps(1)}
                             />
@@ -116,12 +142,24 @@ const WhyQuoroomScreen = () => {
                                     marginBottom: "40px"
                                 }}
                                 label={
-                                    <ImageWithText
+                                    <TextWithImage
                                         url={IconTest}
-                                        title="Гарантия сдачи дома в срок не более 5 месяцев"
-                                        description="3_Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах"
-
-                                    />
+                                        title={"Гарантия сдачи дома в срок не более 5 месяцев"}
+                                        variantText={"body1"}
+                                        variantTitle={"h4"}
+                                        extraClasses={{
+                                            root:classes.wrapperTab,
+                                            title:classes.titleTab,
+                                            text:classes.textTab,
+                                            imageWrapper: classes.imageWrapperTab,
+                                            image:classes.imageTab
+                                        }}
+                                    >
+                                        3_Давно выяснено, что при оценке дизайна и композиции
+                                        читаемый текст мешает сосредоточиться. Lorem Ipsum используют
+                                        потому, что тот обеспечивает более или менее стандартное заполнение
+                                        шаблона, а также реальное распределение букв и пробелов в абзацах
+                                    </TextWithImage>
                                 }
                                 {...a11yProps(2)}
                             />
@@ -133,12 +171,24 @@ const WhyQuoroomScreen = () => {
                                     marginBottom: "40px"
                                 }}
                                 label={
-                                    <ImageWithText
+                                    <TextWithImage
                                         url={IconTest}
-                                        title="Отличные условия для покупки в рассочку"
-                                        description="2_Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах"
-
-                                    />
+                                        title={"Отличные условия для покупки в рассочку"}
+                                        variantText={"body1"}
+                                        variantTitle={"h4"}
+                                        extraClasses={{
+                                            root:classes.wrapperTab,
+                                            title:classes.titleTab,
+                                            text:classes.textTab,
+                                            imageWrapper: classes.imageWrapperTab,
+                                            image:classes.imageTab
+                                        }}
+                                    >
+                                        4_Давно выяснено, что при оценке дизайна и композиции
+                                        читаемый текст мешает сосредоточиться. Lorem Ipsum используют
+                                        потому, что тот обеспечивает более или менее стандартное заполнение
+                                        шаблона, а также реальное распределение букв и пробелов в абзацах
+                                    </TextWithImage>
                                 }
                                 {...a11yProps(3)}
                             />
@@ -149,11 +199,24 @@ const WhyQuoroomScreen = () => {
                                     padding: "0"
                                 }}
                                 label={
-                                    <ImageWithText
+                                    <TextWithImage
                                         url={IconTest}
-                                        title="Все дома с участком не менее 5 соток"
-                                        description="2_Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах"
-                                    />
+                                        title={"Все дома с участком не менее 5 соток"}
+                                        variantText={"body1"}
+                                        variantTitle={"h4"}
+                                        extraClasses={{
+                                            root:classes.wrapperTab,
+                                            title:classes.titleTab,
+                                            text:classes.textTab,
+                                            imageWrapper: classes.imageWrapperTab,
+                                            image:classes.imageTab
+                                        }}
+                                    >
+                                        5_Давно выяснено, что при оценке дизайна и композиции
+                                        читаемый текст мешает сосредоточиться. Lorem Ipsum используют
+                                        потому, что тот обеспечивает более или менее стандартное заполнение
+                                        шаблона, а также реальное распределение букв и пробелов в абзацах
+                                    </TextWithImage>
                                 }
                                 {...a11yProps(4)}
                             />
@@ -163,50 +226,104 @@ const WhyQuoroomScreen = () => {
                         <TabPanel
                             value={value}
                             index={0}>
-                            <BigIconWithText
+                            <TextWithImage
                                 url={IconTest}
-                                desciption="1_Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах"
-                            />
+                                variantText={"body1"}
+                                extraClasses={{
+                                    root:classes.wrapper,
+                                    text:classes.text,
+                                    image:classes.image}}
+                            >
+                                1_Давно выяснено, что при оценке дизайна и композиции
+                                читаемый текст мешает сосредоточиться. Lorem Ipsum используют
+                                потому, что тот обеспечивает более или менее стандартное заполнение
+                                шаблона, а также реальное распределение букв и пробелов в абзацах
+                            </TextWithImage>
                         </TabPanel>
                         <TabPanel
                             value={value}
                             index={1}>
-                            <BigIconWithText
+                            <TextWithImage
                                 url={IconTest}
-                                desciption="2_Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах"
-                            />
+                                variantText={"body1"}
+                                extraClasses={{
+                                    root:classes.wrapper,
+                                    text:classes.text,
+                                    image:classes.image}}
+                            >
+                                2_Давно выяснено, что при оценке дизайна и композиции
+                                читаемый текст мешает сосредоточиться. Lorem Ipsum используют
+                                потому, что тот обеспечивает более или менее стандартное заполнение
+                                шаблона, а также реальное распределение букв и пробелов в абзацах
+                            </TextWithImage>
                         </TabPanel>
                         <TabPanel
                             value={value}
                             index={2}>
-                            <BigIconWithText
+                            <TextWithImage
                                 url={IconTest}
-                                desciption="3_Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах"
-                            />
+                                variantText={"body1"}
+                                extraClasses={{
+                                    root:classes.wrapper,
+                                    text:classes.text,
+                                    image:classes.image}}
+                            >
+                                3_Давно выяснено, что при оценке дизайна и композиции
+                                читаемый текст мешает сосредоточиться. Lorem Ipsum используют
+                                потому, что тот обеспечивает более или менее стандартное заполнение
+                                шаблона, а также реальное распределение букв и пробелов в абзацах
+                            </TextWithImage>
                         </TabPanel>
                         <TabPanel
                             value={value}
                             index={3}>
-                            <BigIconWithText
+                            <TextWithImage
                                 url={IconTest}
-                                desciption="4_Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах"
-                            />
+                                variantText={"body1"}
+                                extraClasses={{
+                                    root:classes.wrapper,
+                                    text:classes.text,
+                                    image:classes.image}}
+                            >
+                                4_Давно выяснено, что при оценке дизайна и композиции
+                                читаемый текст мешает сосредоточиться. Lorem Ipsum используют
+                                потому, что тот обеспечивает более или менее стандартное заполнение
+                                шаблона, а также реальное распределение букв и пробелов в абзацах
+                            </TextWithImage>
                         </TabPanel>
                         <TabPanel
                             value={value}
                             index={4}>
-                            <BigIconWithText
+                            <TextWithImage
                                 url={IconTest}
-                                desciption="5_Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах"
-                            />
+                                variantText={"body1"}
+                                extraClasses={{
+                                    root:classes.wrapper,
+                                    text:classes.text,
+                                    image:classes.image}}
+                            >
+                                5_Давно выяснено, что при оценке дизайна и композиции
+                                читаемый текст мешает сосредоточиться. Lorem Ipsum используют
+                                потому, что тот обеспечивает более или менее стандартное заполнение
+                                шаблона, а также реальное распределение букв и пробелов в абзацах
+                            </TextWithImage>
                         </TabPanel>
                         <TabPanel
                             value={value}
                             index={5}>
-                            <BigIconWithText
+                            <TextWithImage
                                 url={IconTest}
-                                desciption="6_Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах"
-                            />
+                                variantText={"body1"}
+                                extraClasses={{
+                                    root:classes.wrapper,
+                                    text:classes.text,
+                                    image:classes.image}}
+                            >
+                                6_Давно выяснено, что при оценке дизайна и композиции
+                                читаемый текст мешает сосредоточиться. Lorem Ipsum используют
+                                потому, что тот обеспечивает более или менее стандартное заполнение
+                                шаблона, а также реальное распределение букв и пробелов в абзацах
+                            </TextWithImage>
                         </TabPanel>
                     </Grid>
                 </Grid>

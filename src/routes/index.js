@@ -1,5 +1,5 @@
 import App from 'components/app'
-import { HomePage } from 'components/pages';
+import {HomePage, ProductsPage, NewsPage, ProductPage, ArticlePage} from 'components/pages';
 
 const NotFoundRoute = {
 	path: '*',
@@ -15,6 +15,26 @@ const GlobalAppRouter = {
 				{
 					component: HomePage,
 					path: '/home',
+					exact: true
+				},
+				{
+					component: ProductsPage,
+					path: '/products',
+					exact: true
+				},
+				{
+					component: NewsPage,
+					path: '/news',
+					exact: true
+				},
+				{
+					component: ProductPage,
+					path: '/products/:productId',
+					exact: true
+				},
+				{
+					component: ArticlePage,
+					path: '/news/:articleId',
 					exact: true
 				},
 				NotFoundRoute

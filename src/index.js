@@ -19,7 +19,12 @@ const theme = createTheme({
             main: 'rgba(247, 172, 114, 1)',
         },
     },
-    mixins: {},
+    mixins: {
+        link: {
+            textDecoration: 'none',
+            color: 'inherit'
+        }
+    },
     overrides: {
 
     },

@@ -1,32 +1,36 @@
 import styles from './index.styles'
 import React from "react"
 import {Box, Typography} from "@mui/material"
+import clsx from 'clsx'
 
-
-const NewCard = ({src, title, description, date}) => {
+const NewCard = ({src, title, description, date, variantTitle, extraClasses = {}}) => {
     const classes = styles();
 
     return(
-        <Box className={classes.root}>
+        <Box className={clsx(classes.root, extraClasses?.root)}>
             <img
-                className={classes.img}
+                className={clsx(classes.img, extraClasses?.img)}
                 src={src}
                 alt=""/>
             <Box
-                className={classes.wrapperText}>
+                className={clsx(classes.wrapperText, extraClasses?.wrapperText)}
+            >
                 <Typography
-                    variant="h4"
-                    className={classes.title}>
+                    variant={ variantTitle || "h3" }
+                    className={clsx(classes.title, extraClasses?.title)}
+                >
                     {title}
                 </Typography>
                 <Typography
                     variant="body2"
-                    className={classes.description}>
+                    className={clsx(classes.description, extraClasses?.description)}
+                >
                     {description}
                 </Typography>
                 <Typography
                     variant="body2"
-                    className={classes.date}>
+                    className={clsx(classes.date, extraClasses?.date)}
+                >
                     {date}
             </Typography>
             </Box>

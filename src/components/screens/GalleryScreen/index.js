@@ -8,13 +8,12 @@ import PropTypes from 'prop-types'
 
 
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"
-import { Carousel } from 'react-responsive-carousel'
 
 
 
 
-import {ScreenLayout, SlickSlider} from "../../common";
+
+import {ScreenLayout, Slider} from "../../common";
 import ArrowSlider from "../../../assets/right_arrow.png"
 
 
@@ -80,76 +79,25 @@ const GalleryScreen = () => {
                 </Tabs>
             </Container>
             <TabPanel classes={classes.tabWrap} value={value} index={0}>
-                <Carousel className={classes.carouselWrap}
-                          renderArrowPrev={(onClickHandler, hasPrev, label) =>
-                              (
-                                  <button type="button" onClick={onClickHandler} title={label} className={classes.arrowLeft}>
-
-                                  </button>
-                              )
-                          }
-                          renderArrowNext={(onClickHandler, hasNext, label) =>
-                              (
-                                  <button type="button" onClick={onClickHandler} title={label} className={classes.arrowRight}>
-
-                                  </button>
-                              )
-                          }
-                          showIndicators={false}
-                          showThumbs={false}
-                          showStatus={false}>
+                <Slider>
                     <img className={classes.img} src={GalleryImg1} alt=""/>
                     <img className={classes.img} src={GalleryImg2} alt=""/>
                     <img className={classes.img} src={GalleryImg3} alt=""/>
-                </Carousel>
+                </Slider>
             </TabPanel>
             <TabPanel classes={classes.tabWrap} value={value} index={1}>
-                <Carousel className={classes.carouselWrap}
-                          renderArrowPrev={(onClickHandler, hasPrev, label) =>
-                              (
-                                  <button type="button" onClick={onClickHandler} title={label} className={classes.arrowLeft}>
-
-                                  </button>
-                              )
-                          }
-                          renderArrowNext={(onClickHandler, hasNext, label) =>
-                              (
-                                  <button type="button" onClick={onClickHandler} title={label} className={classes.arrowRight}>
-
-                                  </button>
-                              )
-                          }
-                          showIndicators={false}
-                          showThumbs={false}
-                          showStatus={false}>
+                <Slider>
                     <img className={classes.img} src={GalleryImg1} alt=""/>
                     <img className={classes.img} src={GalleryImg2} alt=""/>
                     <img className={classes.img} src={GalleryImg3} alt=""/>
-                </Carousel>
+                </Slider>
             </TabPanel>
             <TabPanel classes={classes.tabWrap} value={value} index={2}>
-                <Carousel className={classes.carouselWrap}
-                          renderArrowPrev={(onClickHandler, hasPrev, label) =>
-                              (
-                                  <button type="button" onClick={onClickHandler} title={label} className={classes.arrowLeft}>
-
-                                  </button>
-                              )
-                          }
-                          renderArrowNext={(onClickHandler, hasNext, label) =>
-                              (
-                                  <button type="button" onClick={onClickHandler} title={label} className={classes.arrowRight}>
-
-                                  </button>
-                              )
-                          }
-                          showIndicators={false}
-                          showThumbs={false}
-                          showStatus={false}>
+                <Slider>
                     <img className={classes.img} src={GalleryImg1} alt=""/>
                     <img className={classes.img} src={GalleryImg2} alt=""/>
                     <img className={classes.img} src={GalleryImg3} alt=""/>
-                </Carousel>
+                </Slider>
             </TabPanel>
         </ScreenLayout>
     )

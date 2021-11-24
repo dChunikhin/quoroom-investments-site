@@ -21,6 +21,17 @@ export default makeStyles((theme) => {
                 marginBottom: "34px"
             },
         },
+        buttonTop: {
+            [theme.breakpoints.down('sm')]: {
+                display: "none"
+            },
+        },
+        buttonBottom: {
+            display:"none",
+            [theme.breakpoints.down('sm')]: {
+                display: "flex"
+            },
+        },
         product: {
             backgroundColor: "rgba(40, 44, 52, 1)",
             minHeight: "400px",

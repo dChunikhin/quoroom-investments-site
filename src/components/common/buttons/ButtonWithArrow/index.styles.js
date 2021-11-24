@@ -46,7 +46,8 @@ export default makeStyles((theme) => {
             color: "rgba(247, 172, 114, 1)",
             marginRight: "30px",
             [theme.breakpoints.down('sm')]: {
-                fontSize: "14px",
+
+                marginRight: "14px",
             },
         },
         icon: {
