@@ -1,5 +1,6 @@
 import App from 'components/app'
 import {HomePage, ProductsPage, NewsPage, ProductPage, ArticlePage} from 'components/pages';
+import {NewsScreen} from "../components/screens";
 
 const NotFoundRoute = {
 	path: '*',

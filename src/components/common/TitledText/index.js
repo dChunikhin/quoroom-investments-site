@@ -3,7 +3,7 @@ import styles from "./index.styles"
 import {Box, Typography} from "@mui/material";
 import clsx from 'clsx'
 
-const TitledText = ({ title, children, variantTitle, variantText, inline = true, caption, extraClasses = {} }) => {
+const TitledText = ({title, children, variantTitle, variantText, inline = true, caption, extraClasses = {} }) => {
     const classes = styles({ inline });
     return (
         <Box className={clsx(classes.root, extraClasses?.root)}>

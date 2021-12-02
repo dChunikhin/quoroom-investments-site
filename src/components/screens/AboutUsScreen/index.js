@@ -2,12 +2,13 @@ import styles from './index.styles'
 import React from "react"
 import {Box, Grid, Typography, Container, Button} from "@mui/material"
 import AboutImg from "assets/about_img.png"
-import arrowRight from "../../../assets/right_arrow.png";
 import {ButtonWithArrow, ScreenLayout} from "../../common";
-import clsx from "clsx";
+
+import aboutCompany from "data/aboutCompany.json"
 
 const AboutUsScreen = () => {
     const classes = styles();
+    console.log(aboutCompany);
     return (
         <ScreenLayout extraClasses={{root:classes.root}}>
             <Container>
@@ -23,36 +24,19 @@ const AboutUsScreen = () => {
                                 Про Компанию
                             </Typography>
                             <Typography className={classes.description} variant="body1">
-                                Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому,
-                                <br/>
-                                <br/>
-                                Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому,
+                                {aboutCompany.description}
                             </Typography>
-
-
                             <Grid container className={classes.advantages} spacing={2}>
-                                <Grid item sm={6}>
-                                    <Typography variant="subtitle1" className={classes.advantages__title}>
-                                        Большой опыт в строительстве
-                                    </Typography>
-                                </Grid>
-                                <Grid item sm={6}>
-                                    <Typography variant="subtitle1" className={classes.advantages__title}>
-                                        10 лет на рынке частных домов в провинции
-                                    </Typography>
-                                </Grid>
-                                <Grid item sm={6}>
-                                    <Typography variant="subtitle1" className={classes.advantages__title}>
-                                        Кидаем сразу же как только можем
-                                    </Typography>
-                                </Grid>
-                                <Grid item sm={6}>
-                                    <Typography variant="subtitle1" className={classes.advantages__title}>
-                                        Денис не платит бабки своим рабам
-                                    </Typography>
-                                </Grid>
+                                {aboutCompany.advantages.map((advantage) => {
+                                    return (
+                                        <Grid item sm={6}>
+                                            <Typography variant="subtitle1" className={classes.advantages__title}>
+                                                {advantage}
+                                            </Typography>
+                                        </Grid>
+                                    )
+                                })}
                             </Grid>
-
                             <ButtonWithArrow
                                 text={"Узнать по подробней"}
                             />

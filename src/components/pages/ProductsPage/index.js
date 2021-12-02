@@ -4,6 +4,8 @@ import {Grid, Container, Typography} from "@mui/material";
 import {BreadcrumbsLayout, ProductPreview, ScreenLayout} from "../../common";
 import {ContactUsScreen} from "../../screens";
 
+import products from 'data/products';
+
 import {Link, useLocation, useRouteMatch} from "react-router-dom";
 import * as url from "url";
 
@@ -11,52 +13,7 @@ const ProductsPage = () => {
     const classes = styles();
 
     const {url} = useRouteMatch();
-    const items = [
-        {
-            id: "1",
-            subtitle: "Одноэтажный каркасный дом",
-            title: "Проект “Таунхаус”",
-            area: "140 м",
-            dimensions: "14,6 х 10,5 м",
-            livingSpace: "98,8 м",
-            bedrooms: "2",
-            range: "“под ключ” 3 месяца",
-            price: "от $300 000 "
-        },
-        {
-            id: "2",
-            subtitle: "Одноэтажный каркасный дом",
-            title: "Проект “Таунхаус”",
-            area: "140 м",
-            dimensions: "14,6 х 10,5 м",
-            livingSpace: "98,8 м",
-            bedrooms: "2",
-            range: "“под ключ” 3 месяца",
-            price: "от $300 000 "
-        },
-        {
-            id: "3",
-            subtitle: "Одноэтажный каркасный дом",
-            title: "Проект “Таунхаус”",
-            area: "140 м",
-            dimensions: "14,6 х 10,5 м",
-            livingSpace: "98,8 м",
-            bedrooms: "2",
-            range: "“под ключ” 3 месяца",
-            price: "от $300 000 "
-        },
-        {
-            id: "4",
-            subtitle: "Одноэтажный каркасный дом",
-            title: "Проект “Таунхаус”",
-            area: "140 м",
-            dimensions: "14,6 х 10,5 м",
-            livingSpace: "98,8 м",
-            bedrooms: "2",
-            range: "“под ключ” 3 месяца",
-            price: "от $300 000 "
-        },
-    ];
+
 
     const renderProduct = (product) => (
         <Grid item sm={12} md={6} xs={12}>
@@ -79,7 +36,7 @@ const ProductsPage = () => {
             <ScreenLayout extraClasses={{ root: classes.screenLayout}}>
                 <Container>
                     <Grid container spacing={2}>
-                        {items.map(renderProduct)}
+                        {products.map(renderProduct)}
                     </Grid>
                 </Container>
             </ScreenLayout>

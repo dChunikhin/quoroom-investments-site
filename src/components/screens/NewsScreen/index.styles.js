@@ -6,10 +6,12 @@ export default makeStyles((theme) => {
         root: {
             backgroundColor: "#25252D"
         },
+        link: theme.mixins.link,
         title: {
             color: "#fff",
             [theme.breakpoints.down('md')]: {
-                fontSize: "24px"
+                fontSize: "18px",
+                fontWeight: "400"
             },
         },
         button__wrap: {
@@ -26,6 +28,18 @@ export default makeStyles((theme) => {
                 marginBottom: "34px",
             },
         },
+        buttonTop: {
+            [theme.breakpoints.down('sm')]: {
+                display: "none",
+            },
+        },
+        buttonBottom: {
+            display: "none",
+            [theme.breakpoints.down('sm')]: {
+                display: "flex",
+                marginTop: "24px"
+            },
+        }
 
     }
 });

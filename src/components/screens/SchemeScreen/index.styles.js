@@ -48,6 +48,8 @@ export default makeStyles((theme) => {
             },
         },
         schemeHead: {
+            display: "flex",
+            justifyContent: "space-between",
             paddingRight: "18px",
             [theme.breakpoints.down('md')]: {
                 marginBottom: "24px",
@@ -81,8 +83,8 @@ export default makeStyles((theme) => {
             fontSize: "14px",
             fontStyle: "italic",
             fontWeight: "300",
-            color: "#fff",
-            opacity: ".3",
+            color: "#F7AC72",
+
             marginBottom: "20px",
             position: "relative",
             "&::before": {
@@ -90,7 +92,7 @@ export default makeStyles((theme) => {
                 display: "block",
                 position: "absolute",
                 top: "50%",
-                right: "10px",
+                right: "20px",
                 width: "80%",
                 height: "1px",
                 backgroundColor: "#606060"
@@ -99,8 +101,8 @@ export default makeStyles((theme) => {
                 content: "''",
                 display: "block",
                 position: "absolute",
-                top: "7px",
-                right: "10px",
+                top: "8px",
+                right: "20px",
                 width: "5px",
                 height: "7px",
                 backgroundImage:  `url(${schemeArr})`,

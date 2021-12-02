@@ -38,7 +38,9 @@ const Header = () => {
                 </Box>
 
                 <Box className={classes.phone}>
-                    <img src={PhoneIcon} className={classes.phone__icon} alt=""/>
+                    <Box className={classes.imgWrapper}>
+                        <img src={PhoneIcon} className={classes.phoneIcon} alt=""/>
+                    </Box>
                     <Typography className={classes.phone__number} variant="subtitle1">+38 (050) 690-04-40</Typography>
                 </Box>
 

@@ -6,6 +6,7 @@ import { useFormik } from 'formik';
 import { Button, FormControl, MenuItem, Select, TextField, InputLabel, Box, Typography } from "@mui/material";
 
 import schema from './index.scheme';
+import {ButtonWithArrow} from "../../common";
 
 const ContactForm = ({ onSubmit }) => {
 
@@ -82,7 +83,11 @@ const ContactForm = ({ onSubmit }) => {
                     error={formik.touched.message && Boolean(formik.errors.message)}
                     helperText={formik.touched.message && formik.errors.message}
                 />
-                <Button type={'submit'} size={'large'} color="primary" variant="contained" className={classes.button}>Отправить</Button>
+                <ButtonWithArrow
+                    text={"Отправить"}
+                    extraClasses={{root:classes.button}}
+                />
+                {/*<Button type={'submit'} size={'large'} color="primary" variant="contained" className={classes.button}>Отправить</Button>*/}
             </form>
         </Box>
     )

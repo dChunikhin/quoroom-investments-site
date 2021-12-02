@@ -6,44 +6,83 @@ import {makeStyles} from "@mui/styles";
 export default makeStyles((theme) => {
     return {
         root: {
+            position: "relative",
             boxShadow: "none",
             cursor: "pointer",
             transition: "0.3s",
             marginBottom: "30px",
+            paddingBottom: "24px",
             "&:hover": {
                 backgroundColor: "#F3F4F7"
             }
         },
         imgWrapper: {
-            borderBottom: "4px solid #F7AC72"
+            borderBottom: "4px solid #F7AC72",
+            [theme.breakpoints.up('xs')]: {
+                height: "auto",
+            },
         },
         img: {},
         cardInformation: {
-            padding: "24px 40px 40px 40px",
+            padding: "0 40px 0 40px",
             [theme.breakpoints.down('md')]: {
-                padding: "24px 24px 40px 24px",
+                padding: "0 24px 0px 24px",
             },
+            [theme.breakpoints.down('sm')]: {
+                padding: "0 24px 0px 24px",
+            },
+
         },
 
         subtitle: {
+            marginTop: "20px",
             marginBottom: "14px",
-            color: "#F7AC72"
+            color: "#F7AC72",
+            [theme.breakpoints.down('md')]: {
+
+            },
+            [theme.breakpoints.down('sm')]: {
+                marginTop: "16px",
+            }
         },
         title: {
-            marginBottom: "24px"
+            marginBottom: "24px",
+            [theme.breakpoints.down('sm')]: {
+                fontSize: "18px",
+                marginBottom: "14px",
+            }
+        },
+        subtle: {
+            opacity: ".5"
+        },
+        bold: {
+            fontSize: "19px",
+            [theme.breakpoints.down('sm')]: {
+                fontSize: "16px",
+            }
         },
         infoWrapper: {
 
         },
-        TextWithIconWrapper: {
-            marginTop: "24px",
+        houseInfoWrapper: {
             marginBottom: "24px",
+        },
+
+        textWithIconWrapper: {
+            marginTop: "24px",
+            marginBottom: "34px",
             [theme.breakpoints.down('md')]: {
-                marginBottom: "14px",
+                marginTop: "24px",
+                marginBottom: "10px",
             },
         },
-        houseInfoWrapper: {
-            marginBottom: "24px"
+        price: {
+        },
+        button: {
+            marginLeft: "40px",
+            [theme.breakpoints.down('md')]: {
+                marginLeft: "0"
+            },
         }
     }
 });

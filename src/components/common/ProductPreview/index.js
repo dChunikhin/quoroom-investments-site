@@ -12,8 +12,6 @@ const ProductPreview = ({data}) => {
     const classes = styles();
     const isLg = useMediaQuery((theme) => theme.breakpoints.down('lg'));
 
-    console.log(data);
-
     return(
         <Box>
             <Card className={classes.root}>
@@ -30,50 +28,64 @@ const ProductPreview = ({data}) => {
                     <Typography className={classes.title} gutterBottom variant="h3" component="div">
                         {data?.title}
                     </Typography>
-                    <Grid container spacing={2} className={classes.houseInfoWrapper}>
-                        <Grid item xs={6} sm={6} md={6} lg={6}>
-                            <TitledText title={"Площадь"} inline={isLg ? false : true} extraClasses={{ root: classes.infoText}}>
-                                {data?.area}
-                                97.4м
-                            </TitledText>
+                    <Box className={classes.houseInfoWrapper}>
+                        <Grid container spacing={2}>
+                            <Grid item xs={6} sm={6} md={6} lg={6}>
+                                <TitledText title={"Площадь"} inline={isLg ? false : true} extraClasses={{ text: classes.bold, title: classes.subtle}}>
+                                    {data?.square}
+                                </TitledText>
+                            </Grid>
+                            <Grid item xs={6} sm={6} md={6} lg={6}>
+                                <TitledText title={"Габариты"} inline={isLg ? false : true} extraClasses={{ text: classes.bold, title: classes.subtle }}>
+                                    {data?.dimensions}
+                                </TitledText>
+                            </Grid>
+                            <Grid item xs={6} sm={6} md={6} lg={6}>
+                                <TitledText title={"Жилая"} inline={isLg ? false : true} extraClasses={{ text: classes.bold, title: classes.subtle }}>
+                                    {data?.living}
+                                </TitledText>
+                            </Grid>
+                            <Grid item xs={6} sm={6} md={6} lg={6}>
+                                <TitledText title={"Спален"} inline={isLg ? false : true} extraClasses={{ text: classes.bold, title: classes.subtle }}>
+                                    {data?.bedrooms}
+                                </TitledText>
+                            </Grid>
                         </Grid>
-                        <Grid item xs={6} sm={6} md={6} lg={6}>
-                            <TitledText title={"Габариты"} inline={isLg ? false : true} extraClasses={{ root: classes.infoText }}>
-                                {data?.dimensions}
-                                97.4м
-                            </TitledText>
-                        </Grid>
-                        <Grid item xs={6} sm={6} md={6} lg={6}>
-                            <TitledText title={"Жилая"} inline={isLg ? false : true} extraClasses={{ root: classes.infoText }}>
-                                97.4м
-                            </TitledText>
-                        </Grid>
-                        <Grid item xs={6} sm={6} md={6} lg={6}>
-                            <TitledText title={"Спален"} inline={isLg ? false : true} extraClasses={{ root: classes.infoText }}>
-                                2
-                            </TitledText>
-                        </Grid>
-                    </Grid>
+                    </Box>
                     <hr/>
-                    <Grid container className={classes.TextWithIconWrapper}>
-                        <Grid item xs={12} sm={6} md={6}>
-                            <TextWithImage
-                                url={HouseIcon}
-                                title={"“под ключ” 3 месяца"}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={6} md={6}>
-                            <TextWithImage
-                                url={PiceIcon}
-                                title={"от $300 000"}
-                            />
-                        </Grid>
-                    </Grid>
-                    <ButtonWithArrow
-                        text={"Получить консультацию"}
-                    />
-                </CardContent>
+                    <Box className={classes.textWithIconWrapper}>
+                        <Grid container>
+                            <Grid item xs={12} sm={6} md={6}>
+                                <TextWithImage
+                                    url={HouseIcon}
+                                    title={data?.range}
+                                    extraClasses={{
+                                        root: classes.textWithIcon,
+                                        text: classes.range
+                                    }}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6} md={6}>
+                                <TextWithImage
+                                    extraClasses={{
+                                        root: classes.textWithIcon,
+                                        text: classes.price
+                                    }}
 
+
+                                    url={PiceIcon}
+                                    title={data?.price}
+                                />
+                            </Grid>
+                        </Grid>
+                    </Box>
+
+                </CardContent>
+                <ButtonWithArrow extraClasses={{
+                    root: classes.button
+                }}
+                    text={"Получить консультацию"}
+                />
             </Card>
         </Box>
     )

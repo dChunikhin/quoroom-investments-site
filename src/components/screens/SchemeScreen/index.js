@@ -2,7 +2,9 @@ import styles from './index.styles'
 import React from "react"
 import {Box, Button, Container, Typography, Grid} from "@mui/material"
 import arrowRight from "../../../assets/right_arrow.png";
-import {ButtonWithArrow, ScreenLayout, TitledText} from "../../common";
+import {ButtonWithArrow, NewCard, ScreenLayout, TitledText} from "../../common";
+
+import steps from "data/steps.json"
 
 const SchemeScreen = () => {
   const classes = styles()
@@ -11,7 +13,7 @@ const SchemeScreen = () => {
           <Container>
               <Box className={classes.scheme}>
                   <Grid container spacing={2}>
-                      <Grid item sm={12} md={12} lg={2}>
+                      <Grid item sm={12} md={12} lg={12}>
                           <Box className={classes.schemeHead}>
                               <Typography className={classes.title}>
                                   Схема работы
@@ -22,61 +24,25 @@ const SchemeScreen = () => {
                               />
                           </Box>
                       </Grid>
-                      <Grid item sm={12} md={12} lg={10}>
+                      <Grid item sm={12} md={12} lg={12}>
                           <Box className={classes.schemeContainer}>
-                              <Box className={classes.schemeItem}>
-                                  <Typography className={classes.number}>01</Typography>
-                                  <TitledText
-                                      title={"Вы оставляете заявку"}
-                                      inline={false}
-                                      variantText={"body2"}
-                                      variantTitle={"subtitle1"}
-                                      extraClasses={{ root: classes.schemeBox, title:classes.subtitle, text:classes.description}}>
-                                      Вы можете оставить заявку
-                                      на сайте, позвонить или
-                                      написать нам на email
-                                  </TitledText>
-                              </Box>
-                              <Box className={classes.schemeItem}>
-                                  <Typography className={classes.number}>02</Typography>
-                                  <TitledText
-                                      title={"Обработка заявки"}
-                                      inline={false}
-                                      variantText={"body2"}
-                                      variantTitle={"subtitle1"}
-                                      extraClasses={{ root: classes.schemeBox, title:classes.subtitle, text:classes.description}}>
-                                      Вы можете оставить заявку
-                                      на сайте, позвонить или
-                                      написать нам на email
-                                  </TitledText>
-                              </Box>
-                              <Box className={classes.schemeItem}>
-                                  <Typography className={classes.number}>03</Typography>
-
-                                  <TitledText
-                                      title={"Назначаем встречу"}
-                                      inline={false}
-                                      variantText={"body2"}
-                                      variantTitle={"subtitle1"}
-                                      extraClasses={{ root: classes.schemeBox, title:classes.subtitle, text:classes.description}}>
-                                      Вы можете оставить заявку
-                                      на сайте, позвонить или
-                                      написать нам на email
-                                  </TitledText>
-                              </Box>
-                              <Box className={classes.schemeItem}>
-                                  <Typography className={classes.number}>04</Typography>
-                                  <TitledText
-                                      title={"Подписание договора"}
-                                      inline={false}
-                                      variantText={"body2"}
-                                      variantTitle={"subtitle1"}
-                                      extraClasses={{ root: classes.schemeBox, title:classes.subtitle, text:classes.description}}>
-                                      Вы можете оставить заявку
-                                      на сайте, позвонить или
-                                      написать нам на email
-                                  </TitledText>
-                              </Box>
+                              {steps.map((item) => {
+                                  return (
+                                      <Box className={classes.schemeItem}>
+                                          <Typography className={classes.number}>
+                                              {item.id}
+                                          </Typography>
+                                          <TitledText
+                                              title={item.title}
+                                              inline={false}
+                                              variantText={"body2"}
+                                              variantTitle={"subtitle1"}
+                                              extraClasses={{ root: classes.schemeBox, title:classes.subtitle, text:classes.description}}>
+                                              {item.content}
+                                          </TitledText>
+                                      </Box>
+                                  )
+                              })}
                               <ButtonWithArrow
                                   text={"Получить консультацию"}
                                   extraClasses={{root:classes.buttonBottom}}

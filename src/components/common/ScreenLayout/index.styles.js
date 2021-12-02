@@ -10,6 +10,9 @@ export default makeStyles((theme) => {
             [theme.breakpoints.down('md')]: {
                 padding: "60px 24px"
             },
+            [theme.breakpoints.down('sm')]: {
+                padding: "40px 0px"
+            },
         },
     }
 });

@@ -3,7 +3,9 @@ import React from "react"
 import {Box, Container, Typography, Grid, Tabs, Tab} from "@mui/material"
 import IconTest from 'assets/house_icon.png'
 import PropTypes from 'prop-types'
-import { ScreenLayout, TextWithImage} from "../../common";
+import { ScreenLayout, TextWithImage} from "../../common"
+
+import benefits from "data/benefits.json"
 
 const WhyQuoroomScreen = () => {
     const classes = styles();
@@ -71,244 +73,62 @@ const WhyQuoroomScreen = () => {
                                 }
                             }}
                         >
-                            <Tab
-                                classes={{root: classes.tab}}
-                                sx={{
-                                    width: "100%",
-                                    textAlign: "left",
-                                    padding: "0",
-                                    marginBottom: "40px"
-                                }}
-                                variant="fullWidth"
-
-                                label={
-                                    <TextWithImage
-                                        url={IconTest}
-                                        title={"Большой опыт в строительстве"}
-                                        variantText={"body1"}
-                                        variantTitle={"h4"}
-                                        extraClasses={{
-                                            root:classes.wrapperTab,
-                                            title:classes.titleTab,
-                                            text:classes.textTab,
-                                            imageWrapper: classes.imageWrapperTab,
-                                            image:classes.imageTab
+                            {
+                                benefits.map((benefit, index) => (
+                                    <Tab
+                                        classes={{root: classes.tab}}
+                                        sx={{
+                                            textAlign: "left",
+                                            padding: "0"
                                         }}
-                                    >
-                                        1_Давно выяснено, что при оценке дизайна и композиции
-                                        читаемый текст мешает сосредоточиться. Lorem Ipsum используют
-                                        потому, что тот обеспечивает более или менее стандартное заполнение
-                                        шаблона, а также реальное распределение букв и пробелов в абзацах
-                                    </TextWithImage>
-                                }
-                                {...a11yProps(0)}
-                            >
-                            </Tab>
-                            <Tab
-                                classes={{root: classes.tab}}
-                                sx={{
-                                    width: "100%",
-                                    textAlign: "left",
-                                    padding: "0",
-                                    marginBottom: "40px"
-                                }}
-                                label={
-                                    <TextWithImage
-                                        url={IconTest}
-                                        title={"Бесплатное и быстрое оформление"}
-                                        variantText={"body1"}
-                                        variantTitle={"h4"}
-                                        extraClasses={{
-                                            root:classes.wrapperTab,
-                                            title:classes.titleTab,
-                                            text:classes.textTab,
-                                            imageWrapper: classes.imageWrapperTab,
-                                            image:classes.imageTab
-                                        }}
-                                    >
-                                        2_Давно выяснено, что при оценке дизайна и композиции
-                                        читаемый текст мешает сосредоточиться. Lorem Ipsum используют
-                                        потому, что тот обеспечивает более или менее стандартное заполнение
-                                        шаблона, а также реальное распределение букв и пробелов в абзацах
-                                    </TextWithImage>
-                                }
-                                {...a11yProps(1)}
-                            />
-                            <Tab
-                                classes={{root: classes.tab}}
-                                sx={{
-                                    textAlign: "left",
-                                    padding: "0",
-                                    marginBottom: "40px"
-                                }}
-                                label={
-                                    <TextWithImage
-                                        url={IconTest}
-                                        title={"Гарантия сдачи дома в срок не более 5 месяцев"}
-                                        variantText={"body1"}
-                                        variantTitle={"h4"}
-                                        extraClasses={{
-                                            root:classes.wrapperTab,
-                                            title:classes.titleTab,
-                                            text:classes.textTab,
-                                            imageWrapper: classes.imageWrapperTab,
-                                            image:classes.imageTab
-                                        }}
-                                    >
-                                        3_Давно выяснено, что при оценке дизайна и композиции
-                                        читаемый текст мешает сосредоточиться. Lorem Ipsum используют
-                                        потому, что тот обеспечивает более или менее стандартное заполнение
-                                        шаблона, а также реальное распределение букв и пробелов в абзацах
-                                    </TextWithImage>
-                                }
-                                {...a11yProps(2)}
-                            />
-                            <Tab
-                                classes={{root: classes.tab}}
-                                sx={{
-                                    textAlign: "left",
-                                    padding: "0",
-                                    marginBottom: "40px"
-                                }}
-                                label={
-                                    <TextWithImage
-                                        url={IconTest}
-                                        title={"Отличные условия для покупки в рассочку"}
-                                        variantText={"body1"}
-                                        variantTitle={"h4"}
-                                        extraClasses={{
-                                            root:classes.wrapperTab,
-                                            title:classes.titleTab,
-                                            text:classes.textTab,
-                                            imageWrapper: classes.imageWrapperTab,
-                                            image:classes.imageTab
-                                        }}
-                                    >
-                                        4_Давно выяснено, что при оценке дизайна и композиции
-                                        читаемый текст мешает сосредоточиться. Lorem Ipsum используют
-                                        потому, что тот обеспечивает более или менее стандартное заполнение
-                                        шаблона, а также реальное распределение букв и пробелов в абзацах
-                                    </TextWithImage>
-                                }
-                                {...a11yProps(3)}
-                            />
-                            <Tab
-                                classes={{root: classes.tab}}
-                                sx={{
-                                    textAlign: "left",
-                                    padding: "0"
-                                }}
-                                label={
-                                    <TextWithImage
-                                        url={IconTest}
-                                        title={"Все дома с участком не менее 5 соток"}
-                                        variantText={"body1"}
-                                        variantTitle={"h4"}
-                                        extraClasses={{
-                                            root:classes.wrapperTab,
-                                            title:classes.titleTab,
-                                            text:classes.textTab,
-                                            imageWrapper: classes.imageWrapperTab,
-                                            image:classes.imageTab
-                                        }}
-                                    >
-                                        5_Давно выяснено, что при оценке дизайна и композиции
-                                        читаемый текст мешает сосредоточиться. Lorem Ipsum используют
-                                        потому, что тот обеспечивает более или менее стандартное заполнение
-                                        шаблона, а также реальное распределение букв и пробелов в абзацах
-                                    </TextWithImage>
-                                }
-                                {...a11yProps(4)}
-                            />
+                                        label={
+                                            <TextWithImage
+                                                url={IconTest}
+                                                title={benefit.title}
+                                                variantText={"body1"}
+                                                variantTitle={"h4"}
+                                                extraClasses={{
+                                                    root:classes.wrapperTab,
+                                                    title:classes.titleTab,
+                                                    text:classes.textTab,
+                                                    imageWrapper: classes.imageWrapperTab,
+                                                    image:classes.imageTab
+                                                }}
+                                            >
+                                                {benefit.description}
+                                            </TextWithImage>
+                                        }
+                                        {...a11yProps(index)}
+                                    />
+                                ))
+                            }
                         </Tabs>
                     </Grid>
                     <Grid item sm={12} md={6} xs={12}>
-                        <TabPanel
-                            value={value}
-                            index={0}>
-                            <TextWithImage
-                                url={IconTest}
-                                variantText={"body1"}
-                                extraClasses={{
-                                    root:classes.wrapper,
-                                    text:classes.text,
-                                    image:classes.image}}
-                            >
-                                1_Давно выяснено, что при оценке дизайна и композиции
-                                читаемый текст мешает сосредоточиться. Lorem Ipsum используют
-                                потому, что тот обеспечивает более или менее стандартное заполнение
-                                шаблона, а также реальное распределение букв и пробелов в абзацах
-                            </TextWithImage>
-                        </TabPanel>
-                        <TabPanel
-                            value={value}
-                            index={1}>
-                            <TextWithImage
-                                url={IconTest}
-                                variantText={"body1"}
-                                extraClasses={{
-                                    root:classes.wrapper,
-                                    text:classes.text,
-                                    image:classes.image}}
-                            >
-                                2_Давно выяснено, что при оценке дизайна и композиции
-                                читаемый текст мешает сосредоточиться. Lorem Ipsum используют
-                                потому, что тот обеспечивает более или менее стандартное заполнение
-                                шаблона, а также реальное распределение букв и пробелов в абзацах
-                            </TextWithImage>
-                        </TabPanel>
-                        <TabPanel
-                            value={value}
-                            index={2}>
-                            <TextWithImage
-                                url={IconTest}
-                                variantText={"body1"}
-                                extraClasses={{
-                                    root:classes.wrapper,
-                                    text:classes.text,
-                                    image:classes.image}}
-                            >
-                                3_Давно выяснено, что при оценке дизайна и композиции
-                                читаемый текст мешает сосредоточиться. Lorem Ipsum используют
-                                потому, что тот обеспечивает более или менее стандартное заполнение
-                                шаблона, а также реальное распределение букв и пробелов в абзацах
-                            </TextWithImage>
-                        </TabPanel>
-                        <TabPanel
-                            value={value}
-                            index={3}>
-                            <TextWithImage
-                                url={IconTest}
-                                variantText={"body1"}
-                                extraClasses={{
-                                    root:classes.wrapper,
-                                    text:classes.text,
-                                    image:classes.image}}
-                            >
-                                4_Давно выяснено, что при оценке дизайна и композиции
-                                читаемый текст мешает сосредоточиться. Lorem Ipsum используют
-                                потому, что тот обеспечивает более или менее стандартное заполнение
-                                шаблона, а также реальное распределение букв и пробелов в абзацах
-                            </TextWithImage>
-                        </TabPanel>
-                        <TabPanel
-                            value={value}
-                            index={4}>
-                            <TextWithImage
-                                url={IconTest}
-                                variantText={"body1"}
-                                extraClasses={{
-                                    root:classes.wrapper,
-                                    text:classes.text,
-                                    image:classes.image}}
-                            >
-                                5_Давно выяснено, что при оценке дизайна и композиции
-                                читаемый текст мешает сосредоточиться. Lorem Ipsum используют
-                                потому, что тот обеспечивает более или менее стандартное заполнение
-                                шаблона, а также реальное распределение букв и пробелов в абзацах
-                            </TextWithImage>
-                        </TabPanel>
-                        <TabPanel
+                        {
+                            benefits.map((benefit, index) => (
+                                <TabPanel className={classes.tabPanel}
+                                          value={value}
+                                          index={index}>
+                                    <TextWithImage
+                                        url={IconTest}
+                                        variantText={"body1"}
+                                        extraClasses={{
+                                            root:classes.wrapper,
+                                            text:classes.text,
+                                            image:classes.image}}
+                                    >
+                                        {benefit.description}
+                                    </TextWithImage>
+                                </TabPanel>
+                            ))
+                        }
+
+
+
+
+
+                        <TabPanel className={classes.tabPanel}
                             value={value}
                             index={5}>
                             <TextWithImage

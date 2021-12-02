@@ -20,6 +20,7 @@ export default makeStyles((theme) => {
         image: {
             marginRight: "14px"
         },
+        title: {},
         text: {
             paddingRight: "15px"
         }

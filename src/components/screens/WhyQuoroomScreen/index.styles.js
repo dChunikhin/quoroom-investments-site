@@ -20,6 +20,7 @@ export default makeStyles((theme) => {
 
         },
         textTab: {
+            lineHeight: "1.7",
             width: "60%",
             [theme.breakpoints.up('md')]: {
                 display: "none",
@@ -56,12 +57,20 @@ export default makeStyles((theme) => {
             },
         },
         titleTab: {
+            lineHeight: "1.7",
             fontWeight: "300",
             // color: "rgba(37, 37, 45, 1)",
             maxWidth: "40%",
             [theme.breakpoints.down('md')]: {
-                fontWeight: "400",
+                fontWeight: "600",
                 color: "rgba(37, 37, 45, 1)",
+                maxWidth: "70%",
+                fontSize: "18px"
+            },
+        },
+        tabPanel: {
+            [theme.breakpoints.down('md')]: {
+                display: "none"
             },
         },
         image: {
@@ -69,9 +78,10 @@ export default makeStyles((theme) => {
             marginBottom: "40px"
         },
         text: {
-
+            lineHeight: "1.7",
         },
         tab: {
+            marginBottom: "24px",
             maxWidth: 'none',
             justifyItems: "start"
         }

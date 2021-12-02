@@ -37,8 +37,9 @@ export default makeStyles((theme) => {
             fontWeight: "500"
         },
         input: {
-            color: "white!important"
-        }
+            color: "white!important",
+
+        },
 
     }
 });

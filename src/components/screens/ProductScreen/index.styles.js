@@ -7,6 +7,7 @@ import ArrowSlider from "assets/right_arrow.png"
 export default makeStyles((theme) => {
     return {
         root: {},
+        link: theme.mixins.link,
         title: {
             [theme.breakpoints.down('md')]: {
                 fontSize: "24px"

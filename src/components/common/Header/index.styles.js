@@ -81,13 +81,30 @@ export default makeStyles((theme) => {
             },
         },
         phone: {
+            cursor: "pointer",
             display: "flex",
             justifyContent: "end",
+            alignItems: "center",
             [theme.breakpoints.down('md')]: {
                 display: "none",
             },
         },
-        phone__icon: {
+        imgWrapper: {
+            display: "flex",
+            justifyContent: "center",
+            position: "relative",
+            "&::before": {
+                content: "",
+                display: "block",
+                width: "30px",
+                height: "30px",
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                backgroundColor: "rgba(247, 172, 114, .5)"
+            }
+        },
+        phoneIcon: {
             marginRight: "12px"
         },
         phone__number: {

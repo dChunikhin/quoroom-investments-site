@@ -18,18 +18,20 @@ export default makeStyles((theme) => {
             fontSize: "24px",
             color: "#fff",
             width: "95%",
-            marginBottom: "16px"
+            marginBottom: "24px"
         },
         button: {
             marginTop: "20px"
         },
         field: {
             marginBottom: "16px",
+
         },
         input: {
             color: "#fff",
             opacity: ".4",
-            fontWeight: "300"
+            fontWeight: "300",
+            paddingBottom: "14px"
         }
     }
 });
