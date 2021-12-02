@@ -28,7 +28,7 @@ export default makeStyles((theme) => {
         },
         contactInformation__map:{
             minHeight: "235px",
-            backgroundColor: "#E9E9E9"
+            backgroundColor: "#E9E9E9",
         },
         contactInformation__title: {
             opacity: ".5"
